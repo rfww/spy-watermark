@@ -2,7 +2,7 @@ import torch
 
 from loss import *
 from models.models import Create_nets
-from models.SG_v1 import Base1
+# from models.Extractor import Base1
 from datasets import *
 from options import TrainOptions
 from optimizer import *
