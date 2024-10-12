@@ -1,13 +1,9 @@
 import torch
-
 from loss import *
 from models.models import Create_nets
-# from models.Extractor import Base1
 from datasets import *
 from options import TrainOptions
 from optimizer import *
-from test import test
-from eval import eval1
 from utils import *
 from torchvision import datasets, models, transforms
 import torch.nn as nn
