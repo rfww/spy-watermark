@@ -7,14 +7,6 @@ import numpy as np
 import math
 
 
-def sample_images(generator, test_dataloader, args, epoch, batches_done):
-    """Saves a generated sample from the validation set"""
-    imgs = next(iter(test_dataloader))
-    real_A = Variable(imgs['A'].type(torch.FloatTensor).cuda())
-    real_B = Variable(imgs['B'].type(torch.FloatTensor).cuda())
-    fake_B = generator(real_A)
-    img_sample = torch.cat((real_A.data, fake_B.data, real_B.data), -2)
-    save_image(img_sample, '%s-%s/%s/%s-%s.png' % (args.exp_name, args.dataset_name, args.img_result_dir, batches_done, epoch), nrow=5, normalize=True)
 
 def to_image(tensor,i,tag,path):
     #for i in range(32):
